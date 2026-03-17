@@ -14,7 +14,7 @@ function AdminDashboard() {
   const [description, setDescription] = useState("");
 
   const fetchJobs = async () => {
-    const response = await fetch("http://localhost:8080/admin/jobs");
+    const response = await fetch("https://recruit-be-production-dc35.up.railway.app/admin/jobs");
     const data = await response.json();
     setJobs(data || []);
   };
@@ -27,7 +27,7 @@ function AdminDashboard() {
 
     e.preventDefault();
 
-    await fetch("http://localhost:8080/admin/jobs", {
+    await fetch("https://recruit-be-production-dc35.up.railway.app/admin/jobs", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -53,7 +53,7 @@ function AdminDashboard() {
 
   const deleteJob = async (id) => {
 
-    await fetch(`http://localhost:8080/admin/jobs/${id}`, {
+    await fetch(`https://recruit-be-production-dc35.up.railway.app/admin/jobs/${id}`, {
       method: "DELETE"
     });
 
