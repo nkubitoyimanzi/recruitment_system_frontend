@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { Search, CheckCircle, XCircle, Trash2 } from "lucide-react";
 
 function HRDashboard() {
@@ -8,21 +8,35 @@ function HRDashboard() {
   const [search, setSearch] = useState("");
   const [totalPages, setTotalPages] = useState(0);
 
-  const fetchApplications = async () => {
+  // const fetchApplications = async () => {
 
-    const response = await fetch(
-      `http://localhost:8080/hr/applications?page=${page}&size=10&search=${search}`
-    );
+  //   const response = await fetch(
+  //     `http://localhost:8080/hr/applications?page=${page}&size=10&search=${search}`
+  //   );
 
-    const data = await response.json();
+  //   const data = await response.json();
 
-    setApplications(data.content || []);
-    setTotalPages(data.totalPages || 0);
-  };
+  //   setApplications(data.content || []);
+  //   setTotalPages(data.totalPages || 0);
+  // };
+  const fetchApplications = useCallback(async () => {
+    try {
+      const response = await fetch(
+        `http://localhost:8080/hr/applications?page=${page}&size=10&search=${search}`
+      );
+
+      const data = await response.json();
+
+      setApplications(data.content || []);
+      setTotalPages(data.totalPages || 0);
+    } catch (error) {
+      console.error("Error fetching applications:", error);
+    }
+  }, [page, search]);
 
   useEffect(() => {
     fetchApplications();
-  }, [page, search]);
+  }, [fetchApplications]);
 
 
   const acceptApplication = async (id) => {
