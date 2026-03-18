@@ -22,7 +22,7 @@ function HRDashboard() {
   const fetchApplications = useCallback(async () => {
     try {
       const response = await fetch(
-        `https://recruit-be-production-dc35.up.railway.app/hr/applications?page=${page}&size=10&search=${search}`
+        `https://recruit-be-zdtc.onrender.com/hr/applications?page=${page}&size=10&search=${search}`
       );
 
       const data = await response.json();
@@ -41,7 +41,7 @@ function HRDashboard() {
 
   const acceptApplication = async (id) => {
 
-    await fetch(`https://recruit-be-production-dc35.up.railway.app/hr/accept/${id}`, {
+    await fetch(`https://recruit-be-zdtc.onrender.com/hr/accept/${id}`, {
       method: "PUT"
     });
 
@@ -59,7 +59,7 @@ function HRDashboard() {
     }
 
     await fetch(
-      `https://recruit-be-production-dc35.up.railway.app/hr/reject/${id}?reason=${encodeURIComponent(reason)}`,
+      `https://recruit-be-zdtc.onrender.com/hr/reject/${id}?reason=${encodeURIComponent(reason)}`,
       { method: "PUT" }
     );
 
