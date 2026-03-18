@@ -11,7 +11,7 @@ function Jobs() {
 
     try {
 
-      const response = await fetch("https://recruit-be-production-dc35.up.railway.app/api/jobs");
+      const response = await fetch("https://recruit-be-zdtc.onrender.com/api/jobs");
       const data = await response.json();
 
       if (Array.isArray(data)) {

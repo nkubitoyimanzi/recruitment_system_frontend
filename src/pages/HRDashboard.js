@@ -69,7 +69,7 @@ function HRDashboard() {
 
   const deleteApplication = async (id) => {
 
-    await fetch(`https://recruit-be-production-dc35.up.railway.app/hr/delete/${id}`, {
+    await fetch(`https://recruit-be-zdtc.onrender.com/hr/delete/${id}`, {
       method: "DELETE"
     });
 

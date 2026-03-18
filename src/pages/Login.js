@@ -15,7 +15,7 @@ function Login() {
 
     try {
 
-      const response = await fetch("https://recruit-be-production-dc35.up.railway.app/auth/login", {
+      const response = await fetch("https://recruit-be-zdtc.onrender.com/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

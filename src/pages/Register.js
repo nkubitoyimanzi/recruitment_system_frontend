@@ -11,37 +11,41 @@ function Register() {
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
-
     e.preventDefault();
 
     try {
+      const response = await fetch(
+        "https://recruit-be-zdtc.onrender.com/auth/register",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            email,
+            password,
+            role: "APPLICANT",
+          }),
+        }
+      );
 
-      const response = await fetch("https://recruit-be-production-dc35.up.railway.app/auth/register", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          name: name,
-          email: email,
-          password: password,
-          role: "APPLICANT"
-        })
-      });
+      // Handle server errors properly
+      if (!response.ok) {
+        const text = await response.text(); // safer than json()
+        throw new Error(text || "Server error");
+      }
 
       const data = await response.json();
 
-      alert(data.message);
+      alert(data.message || "Registered successfully");
 
       navigate("/");
 
     } catch (error) {
-
-      console.error(error);
+      console.error("ERROR:", error);
       alert("Registration failed");
-
     }
-
   };
 
   return (

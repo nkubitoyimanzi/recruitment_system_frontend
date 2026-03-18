@@ -28,7 +28,7 @@ formData.append("jobId", jobId);
 
 try {
 
-  const response = await fetch("https://recruit-be-production-dc35.up.railway.app/applicant/apply", {
+  const response = await fetch("https://recruit-be-zdtc.onrender.com/applicant/apply", {
     method: "POST",
     body: formData
   });

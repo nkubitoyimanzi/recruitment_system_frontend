@@ -8,7 +8,7 @@ function MyApplications() {
 
   useEffect(() => {
 
-    fetch(`https://recruit-be-production-dc35.up.railway.app/applicant/my-applications/${email}`)
+    fetch(`https://recruit-be-zdtc.onrender.com/applicant/my-applications/${email}`)
       .then(res => res.json())
       .then(data => setApplications(data));
 
