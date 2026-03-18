@@ -96,11 +96,11 @@ function HRDashboard() {
       <div className="max-w-7xl mx-auto">
 
         <h1 className="text-3xl font-bold mb-6">
-          HR Applications Dashboard
+          List of applicants
         </h1>
 
 
-        {/* SEARCH */}
+        
         <div className="mb-6 relative w-72">
 
           <Search className="absolute left-3 top-3 text-gray-400" size={18} />
@@ -119,7 +119,7 @@ function HRDashboard() {
         </div>
 
 
-        {/* TABLE */}
+       
         <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
 
           <table className="w-full table-auto text-left">
@@ -151,7 +151,7 @@ function HRDashboard() {
                   <td className="p-4 truncate max-w-[180px]">{app.email}</td>
                   <td className="p-4">{app.phone}</td>
 
-                  {/* ✅ FIXED CV LINK */}
+                  
                   <td className="p-4">
                     {app.cvUrl ? (
                       <a
@@ -220,7 +220,7 @@ function HRDashboard() {
         </div>
 
 
-        {/* PAGINATION */}
+        
         <div className="flex justify-center items-center mt-8 gap-6">
 
           <button

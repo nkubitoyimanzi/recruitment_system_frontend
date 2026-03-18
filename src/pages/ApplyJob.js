@@ -39,10 +39,10 @@ try {
 
     alert(result);
 
-    // store email for MyApplications page
+    
     localStorage.setItem("email", email);
 
-    // redirect user to see their applications
+   
     navigate("/my-applications");
 
   } else {
@@ -68,7 +68,7 @@ return (
 
   <div className="flex bg-white rounded-2xl shadow-xl overflow-hidden max-w-4xl w-full">
 
-    {/* LEFT INFO / IMAGE */}
+    
     <div className="hidden md:flex flex-col justify-center bg-gray-50 p-10 w-1/2">
 
       <img
@@ -89,7 +89,7 @@ return (
 
     </div>
 
-    {/* APPLICATION FORM */}
+    
     <div className="p-10 w-full md:w-1/2">
 
       <h2 className="text-2xl font-bold mb-6 text-center">

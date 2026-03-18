@@ -40,7 +40,7 @@ function Jobs() {
 
     <div className="min-h-screen bg-gray-100 p-10">
 
-      {/* HEADER */}
+      
       <div className="mb-10">
 
         <h1 className="text-4xl font-bold mb-4">
@@ -51,7 +51,7 @@ function Jobs() {
           Find your next career opportunity and apply in minutes.
         </p>
 
-        {/* SEARCH BAR */}
+       
         <div className="relative max-w-md">
 
           <Search className="absolute left-3 top-3 text-gray-400" size={18} />
@@ -69,7 +69,7 @@ function Jobs() {
       </div>
 
 
-      {/* JOB LIST */}
+     
       {filteredJobs.length === 0 ? (
 
         <div className="text-center text-gray-500 mt-20">

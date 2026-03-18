@@ -9,7 +9,7 @@ import ApplyJob from "./pages/ApplyJob";
 import HRDashboard from "./pages/HRDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 import Jobs from "./pages/Jobs";
-import MyApplications from "./pages/MyApplications"; // NEW
+import MyApplications from "./pages/MyApplications"; 
 
 function App() {
 
@@ -17,7 +17,7 @@ function App() {
 
     <BrowserRouter>
 
-      {/* Clean white layout */}
+      
       <div className="min-h-screen bg-gray-100 text-black">
 
         <Navbar />
@@ -26,11 +26,11 @@ function App() {
 
           <Routes>
 
-            {/* Public pages */}
+            
             <Route path="/" element={<Login />} />
             <Route path="/register" element={<Register />} />
 
-            {/* Applicant pages */}
+           
             <Route
               path="/jobs"
               element={
@@ -49,7 +49,7 @@ function App() {
               }
             />
 
-            {/* NEW: Applicant can see their applications */}
+            
             <Route
               path="/my-applications"
               element={
@@ -59,7 +59,7 @@ function App() {
               }
             />
 
-            {/* HR pages */}
+            
             <Route
               path="/dashboard"
               element={
@@ -69,7 +69,7 @@ function App() {
               }
             />
 
-            {/* Admin pages */}
+          
             <Route
               path="/admin"
               element={

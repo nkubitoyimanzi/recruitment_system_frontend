@@ -30,9 +30,9 @@ function Register() {
         }
       );
 
-      // Handle server errors properly
+      
       if (!response.ok) {
-        const text = await response.text(); // safer than json()
+        const text = await response.text(); 
         throw new Error(text || "Server error");
       }
 
@@ -52,7 +52,7 @@ function Register() {
 
     <div className="min-h-screen flex">
 
-      {/* LEFT SIDE */}
+      
       <div className="hidden md:flex w-1/2 bg-gradient-to-br from-purple-600 to-indigo-700 text-white flex-col justify-center items-center p-10">
 
         <Briefcase size={60} />
@@ -69,7 +69,6 @@ function Register() {
       </div>
 
 
-      {/* RIGHT SIDE */}
       <div className="flex w-full md:w-1/2 items-center justify-center bg-gray-100">
 
         <div className="bg-white shadow-2xl rounded-2xl p-10 w-96">
@@ -80,7 +79,7 @@ function Register() {
 
           <form onSubmit={handleRegister} className="space-y-5">
 
-            {/* NAME */}
+            
             <div className="relative">
 
               <User className="absolute left-3 top-3 text-gray-400" size={18} />
@@ -97,7 +96,7 @@ function Register() {
             </div>
 
 
-            {/* EMAIL */}
+            
             <div className="relative">
 
               <Mail className="absolute left-3 top-3 text-gray-400" size={18} />
@@ -114,7 +113,7 @@ function Register() {
             </div>
 
 
-            {/* PASSWORD */}
+            
             <div className="relative">
 
               <Lock className="absolute left-3 top-3 text-gray-400" size={18} />
@@ -131,7 +130,7 @@ function Register() {
             </div>
 
 
-            {/* BUTTON */}
+            
             <button
               type="submit"
               className="w-full bg-indigo-600 text-white p-3 rounded-lg font-semibold hover:bg-indigo-700 transition"
@@ -142,7 +141,7 @@ function Register() {
           </form>
 
 
-          {/* LOGIN LINK */}
+          
           <p className="text-center text-sm text-gray-500 mt-6">
             Already have an account?{" "}
             <Link to="/" className="text-indigo-600 font-semibold hover:underline">

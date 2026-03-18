@@ -60,7 +60,7 @@ function Login() {
 
     <div className="min-h-screen flex">
 
-      {/* LEFT SIDE */}
+      
       <div className="hidden md:flex w-1/2 bg-gradient-to-br from-indigo-600 to-purple-700 text-white flex-col justify-center items-center p-10">
 
         <Briefcase size={60} />
@@ -76,7 +76,7 @@ function Login() {
       </div>
 
 
-      {/* RIGHT SIDE */}
+      
       <div className="flex w-full md:w-1/2 items-center justify-center bg-gray-100">
 
         <div className="bg-white shadow-2xl rounded-2xl p-10 w-96">
@@ -87,7 +87,7 @@ function Login() {
 
           <form onSubmit={handleLogin} className="space-y-5">
 
-            {/* EMAIL */}
+           
             <div className="relative">
 
               <Mail className="absolute left-3 top-3 text-gray-400" size={18} />
@@ -104,7 +104,7 @@ function Login() {
             </div>
 
 
-            {/* PASSWORD */}
+            
             <div className="relative">
 
               <Lock className="absolute left-3 top-3 text-gray-400" size={18} />
@@ -121,7 +121,7 @@ function Login() {
             </div>
 
 
-            {/* BUTTON */}
+            
             <button
               type="submit"
               className="w-full bg-indigo-600 text-white p-3 rounded-lg font-semibold hover:bg-indigo-700 transition"

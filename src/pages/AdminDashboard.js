@@ -64,7 +64,7 @@ function AdminDashboard() {
 
     <div className="flex min-h-screen bg-gray-100">
 
-      {/* SIDEBAR */}
+      
       <div className="w-64 bg-white shadow-lg p-6">
 
         <h2 className="text-2xl font-bold mb-10 text-center">
@@ -92,15 +92,15 @@ function AdminDashboard() {
       </div>
 
 
-      {/* MAIN CONTENT */}
+      
       <div className="flex-1 p-10">
 
-        {/* CREATE JOB PAGE */}
+       
         {activePage === "create" && (
 
           <div className="flex justify-center items-center min-h-[80vh] gap-10">
 
-            {/* LEFT INFO + IMAGE */}
+            
             <div className="hidden lg:flex flex-col justify-center max-w-md">
 
               <img
@@ -129,7 +129,7 @@ function AdminDashboard() {
             </div>
 
 
-            {/* CREATE JOB FORM */}
+            
             <div className="bg-white p-10 rounded-2xl shadow-xl w-[600px]">
 
               <h2 className="text-3xl font-bold mb-8 text-center">
@@ -194,7 +194,7 @@ function AdminDashboard() {
         )}
 
 
-        {/* JOB LIST PAGE */}
+        
         {activePage === "jobs" && (
 
           <div className="bg-white p-8 rounded-2xl shadow-lg">
